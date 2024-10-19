@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .search-bar {
+            margin: 20px;
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        .news-container {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .news-item {
+            margin-bottom: 20px;
+        }
+        .news-item h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .news-item p {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>News Website</h1>
+    </header>
+
+    <!-- Search Bar Section -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search news...">
+        <button onclick="searchNews()">Search</button>
+    </div>
+
+    <!-- News Container -->
+    <div class="news-container" id="newsContainer">
+        <div class="news-item" data-title="Global Leaders Meet at Climate Summit to Address Rising Environmental Concerns">
+            <h2>Global Leaders Meet at Climate Summit to Address Rising Environmental Concerns</h2>
+            <p>World leaders gathered at the 2024 Climate Action Summit, focusing on measures to curb greenhouse gas emissions...</p>
+        </div>
+        <div class="news-item" data-title="AI Breakthrough: Researchers Develop System to Diagnose Rare Diseases">
+            <h2>AI Breakthrough: Researchers Develop System to Diagnose Rare Diseases</h2>
+            <p>A team of scientists has unveiled an AI system capable of diagnosing rare genetic disorders within minutes...</p>
+        </div>
+        <div class="news-item" data-title="Major Tech Company Faces Backlash Over Privacy Breach">
+            <h2>Major Tech Company Faces Backlash Over Privacy Breach</h2>
+            <p>A prominent tech firm is under fire after a massive data breach exposed the personal information of millions of users...</p>
+        </div>
+        <!-- Add more news items as needed -->
+    </div>
+
+    <!-- JavaScript for search functionality -->
+    <script>
+        function searchNews() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const newsItems = document.querySelectorAll(".news-item");
+
+            newsItems.forEach(item => {
+                const title = item.getAttribute("data-title").toLowerCase();
+                if (title.includes(input)) {
+                    item.style.display = "block"; // Show matching items
+                } else {
+                    item.style.display = "none"; // Hide non-matching items
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

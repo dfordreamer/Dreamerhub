@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newsfordreamers</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style12.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">News</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">India</a></li>
+            <li><a href="#">World</a></li>
+            <li><a href="#">Local</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Politics</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Entertainment</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Science</a></li>
+            <li><a href="#">Health</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search Bar Section -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search news...">
+        <button onclick="searchNews()">Search</button>
+    </div>
+
+    <!-- News Section -->
+    <div class="news-container">
+        <div class="news-card">
+            <h2>1. Global Leaders Meet at Climate Summit to Address Rising Environmental Concerns</h2>
+            <p>World leaders gathered at the 2024 Climate Action Summit, focusing on measures to curb greenhouse gas emissions. The summit highlighted the urgency of global cooperation to mitigate climate change and push for sustainable development goals.</p>
+            <a href="#">Read more</a>
+        </div>
+
+        <div class="news-card">
+            <h2>2. AI Breakthrough: Researchers Develop System to Diagnose Rare Diseases</h2>
+            <p>A team of scientists has unveiled an AI system capable of diagnosing rare genetic disorders within minutes, offering hope for millions of patients who face long diagnostic journeys. This innovation is set to revolutionize healthcare by accelerating personalized treatments.</p>
+            <a href="#">Read more</a>
+        </div>
+
+        <div class="news-card">
+            <h2>3. Major Tech Company Faces Backlash Over Privacy Breach</h2>
+            <p>A prominent tech firm is under fire after a massive data breach exposed the personal information of millions of users. The company is now facing legal action and calls for stronger privacy protections from concerned customers and advocacy groups.
+
+            </p>
+            <a href="#">Read more</a>
+        </div>
+
+        <div class="news-card">
+            <h2>4. Stock Market Hits Record High Amid Economic Recovery Optimism
+            </h2>
+            <p>Global stock markets reached new heights this week as investors showed renewed confidence in the economic recovery. Analysts attribute the surge to strong earnings reports and optimism surrounding inflation control efforts by central banks.
+
+            </p>
+            <a href="#">Read more</a>
+        </div>
+        <div class="news-card">
+            <h2>5. New Study Reveals Link Between Social Media Use and Teen Mental Health Issues
+            </h2>
+            <p>A groundbreaking study has found a significant correlation between high social media usage and increased rates of anxiety and depression among teenagers. Experts are calling for more regulation and parental awareness around screen time.
+
+            </p>
+            <a href="#">Read more</a>
+        </div>
+        <div class="news-card">
+            <h2>6. Breakthrough in Cancer Research: New Drug Shows Promise in Clinical Trials
+            </h2>
+            <p>In a major medical breakthrough, researchers have developed a new cancer drug that has shown remarkable success in early-stage clinical trials. The drug targets aggressive forms of cancer and could be a game-changer in oncology treatments.
+
+            </p>
+            <a href="#">Read more</a>
+        </div>
+        <div class="news-card">
+            <h2>7. Electric Vehicle Sales Surge as Countries Push Green Transportation Initiatives
+            </h2>
+            <p>Sales of electric vehicles (EVs) are soaring worldwide, fueled by government incentives and increased consumer awareness of climate change. Experts predict that EVs could dominate the automobile market within the next decade.
+
+            </p>
+            <a href="#">Read more</a>
+        </div>
+        <div class="news-card">
+            <h2>8. Historic Space Mission: NASA to Send First Human to Mars by 2030
+            </h2>
+            <p>NASA has announced ambitious plans to land the first human on Mars by 2030. The mission, part of its Artemis program, aims to expand humanity’s presence in space and pave the way for long-term exploration of the Red Planet.
+
+            </p>
+            <a href="#">Read more</a>
+        </div>
+    </div>
+
+    
+    <!-- JavaScript for search functionality -->
+    <script>
+        function searchNews() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const newsItems = document.querySelectorAll(".news-item");
+
+            newsItems.forEach(item => {
+                const title = item.getAttribute("data-title").toLowerCase();
+                if (title.includes(input)) {
+                    item.style.display = "block"; // Show matching items
+                } else {
+                    item.style.display = "none"; // Hide non-matching items
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

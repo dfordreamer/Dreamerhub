@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dfordreamer.com</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('roadmaps')">Roadmaps</a></li>
+            <li><a href="#" onclick="showSection('news')">News</a></li>
+            <li><a href="#" onclick="showSection('preparation')">Preparation Materials</a></li>
+            <li><a href="#" onclick="showSection('gk')">General Knowledge</a></li>
+            <li><a href="#" onclick="showSection('schemes')">National Schemes</a></li>
+            <li><a href="#" onclick="showSection('nature')">Nature & Beauty</a></li>
+        </ul>
+    </nav>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Home Section -->
+        <section id="home" class="active">
+            <header class="home-header">
+                <h1>Welcome to the dfordreamers.com</h1>
+                <p>Your one-stop destination for all educational and competitive needs!</p>
+            </header>
+
+            <section class="image-grid">
+                <div class="grid-item">News</div>
+                <div class="grid-item">Competitive News</div>
+                <div class="grid-item">Nature and Beauty</div>
+                <div class="grid-item">Film Industry News</div>
+                <div class="grid-item">Career Roadmaps</div>
+                <div class="grid-item">National Schemes</div>
+                <div class="grid-item">Preparation Materials</div>
+            </section>
+            <h1>Explore Nature and Beauty</h1>
+            <section class="nature-gallery">
+                <div class="imgsrc" >
+                <img class="img" src="ntr2.jpg" alt="nature photo">
+                <img class="img" src="ntr3.jpg" alt="nature3">
+            </section>
+            <!-- Roadmaps Section -->
+            <div id="roadmaps">
+                <h1 class="rd1">Roadmaps for Competitive Exams & Career Paths</h1>
+                <div class="rd2"><h2 >UPSC Roadmap</h2>
+                <p>Details on the UPSC roadmap...</p></div>
+                <div class="rd2"><h2>JEE Roadmap</h2>
+                    <p>Details on the JEE roadmap...</p></div>
+                <div class="rd2"><h2>NEET Roadmap</h2>
+                <p>Details on the NEET roadmap...</p></div>
+            </div>
+        
+
+        
+
+        <!-- News Section -->
+        <section id="news">
+            <h1>Latest News Headlines</h1>
+            <div id="news-headlines"></div>
+        </section>
+
+        <!-- Preparation Materials Section -->
+        <section id="preparation">
+            <h1>Preparation Materials for Competitive Exams</h1>
+            <p>Find all preparation materials for UPSC, JEE, NEET, and other competitive exams here.</p>
+        </section>
+
+        <!-- General Knowledge Section -->
+        <section id="gk">
+            <h1>General Knowledge & Current Affairs</h1>
+            <input type="text" id="search-bar" placeholder="Search GK...">
+            <button id="search-btn">Search</button>
+        </section>
+
+        <!-- National Schemes Section -->
+        <section id="schemes">
+            <h1>Government National Schemes</h1>
+            <h2>Schemes for Villagers</h2>
+            <p>Details about schemes like PM Awas Yojana, MGNREGA...</p>
+            <h2>Schemes for Students</h2>
+            <p>Details about scholarships and financial aid for college and school students...</p>
+        </section>
+    </section>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmaps - Your Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .content-container {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .roadmap-item {
+            margin-bottom: 20px;
+        }
+        .roadmap-item h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .roadmap-item p {
+            font-size: 16px;
+            color: #666;
+        }
+        .roadmap-item a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .roadmap-item a:hover {
+            text-decoration: underline;
+        }
+        .search-bar {
+            margin: 20px;
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Roadmaps</h1>
+    </header>
+
+    <!-- Search Bar (if you want to include a search option) -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search roadmaps...">
+        <button onclick="searchRoadmaps()">Search</button>
+    </div>
+
+    <!-- Content Container for Roadmaps -->
+    <div class="content-container" id="roadmapContainer">
+        <div class="roadmap-item" data-title="Web Development Roadmap">
+            <h2>Web Development Roadmap</h2>
+            <p>This roadmap covers everything you need to know about becoming a web developer, from HTML/CSS to JavaScript and backend development.</p>
+            <a href="#">View Roadmap</a>
+        </div>
+        <div class="roadmap-item" data-title="Data Science Roadmap">
+            <h2>Data Science Roadmap</h2>
+            <p>Learn how to become a data scientist, covering Python, data analysis, machine learning, and statistical modeling.</p>
+            <a href="#">View Roadmap</a>
+        </div>
+        <div class="roadmap-item" data-title="Cybersecurity Roadmap">
+            <h2>Cybersecurity Roadmap</h2>
+            <p>Follow this guide to learn the fundamentals of cybersecurity, including network security, cryptography, and ethical hacking.</p>
+            <a href="#">View Roadmap</a>
+        </div>
+        <!-- Add more roadmaps as needed -->
+    </div>
+
+    <!-- JavaScript for search functionality (optional) -->
+    <script>
+        function searchRoadmaps() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const roadmapItems = document.querySelectorAll(".roadmap-item");
+
+            roadmapItems.forEach(item => {
+                const title = item.getAttribute("data-title").toLowerCase();
+                if (title.includes(input)) {
+                    item.style.display = "block"; // Show matching items
+                } else {
+                    item.style.display = "none"; // Hide non-matching items
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
